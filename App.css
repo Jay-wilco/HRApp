@@ -34,8 +34,8 @@ main {
 .person {
   background-color: rgb(242, 247, 245);
   color: black;
-  max-width: 250px;
-  max-height: 300px;
+  max-width: 350px;
+  max-height: 400px;
   padding: 10px;
   border-radius: 5px;
   margin: 20px;
