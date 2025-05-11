@@ -1,0 +1,74 @@
+/* src/pages/AddEmployee.css */
+.addForm {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+.addForm h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.addForm input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.addForm input:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+.addForm button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.addForm button:hover {
+  background-color: #45a049;
+}
+
+.addForm input[type="submit"] {
+  background-color: #007bff;
+  color: white;
+}
+
+.addForm input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .addForm {
+    padding: 15px;
+    width: 90%;
+  }
+
+  .addForm h2 {
+    font-size: 1.5rem;
+  }
+
+  .addForm input,
+  .addForm button {
+    font-size: 1rem;
+  }
+}
