@@ -34,9 +34,28 @@ const AddEmployee = ({ onAddEmployee, employees }) => {
       skills: formData.skills.split(",").map((skill) => skill.trim()),
     };
 
-    onAddEmployee((prevEmployees) => [...prevEmployees, newEmployee]);
-
-    navigate("/");
+    axios
+      .post("http://localhost:3001/employees", newEmployee)
+      .then((res) => {
+        onAddEmployee([...employees, res.data]);
+        navigate("/");
+        setFormData({
+          name: "",
+          title: "",
+          salary: "",
+          phone: "",
+          email: "",
+          animal: "",
+          startDate: "",
+          location: "",
+          department: "",
+          skills: "",
+        });
+      })
+      .catch((err) => {
+        console.error("failed to add employee", err);
+      });
+    // onAddEmployee((prevEmployees) => [...prevEmployees, newEmployee]);
   };
 
   return (
