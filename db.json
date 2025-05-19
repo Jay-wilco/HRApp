@@ -12,9 +12,9 @@
       "location": "Helsinki",
       "department": "Management",
       "skills": [
-        "Recruiting",
-        "Communication",
-        "Employee Relations"
+        null,
+        null,
+        null
       ]
     },
     {
@@ -29,9 +29,9 @@
       "location": "Seoul",
       "department": "IT",
       "skills": [
-        "JavaScript",
-        "React",
-        "CSS"
+        null,
+        null,
+        null
       ]
     },
     {
