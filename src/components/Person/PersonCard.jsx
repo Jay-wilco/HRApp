@@ -1,3 +1,7 @@
+import { useState } from "react";
+
+const [isEditing, setIsEditing] = useState(false);
+
 const Person = (props) => {
   const getYears = (startDate) => {
     const start = new Date(startDate);
