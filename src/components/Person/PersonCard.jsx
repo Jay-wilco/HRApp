@@ -22,19 +22,29 @@ const Person = (props) => {
 
   const animalEmoji = (animal) => {
     const animalMap = {
-      Lion: "🦁",
-      Tiger: "🐯",
-      Rabbit: "🐰",
-      Fox: "🦊",
-      Wolf: "🐺",
-      Butterfly: "🦋",
-      Horse: "🐴",
-      Penguin: "🐧",
-      Raccoon: "🦝",
-      Camel: "🐪",
+      lion: "🦁",
+      tiger: "🐯",
+      rabbit: "🐰",
+      fox: "🦊",
+      wolf: "🐺",
+      butterfly: "🦋",
+      horse: "🐴",
+      penguin: "🐧",
+      raccoon: "🦝",
+      camel: "🐪",
+      cat: "🐱",
+      dog: "🐶",
+      bear: "🐻",
+      elephant: "🐘",
+      monkey: "🐒",
+      cow: "🐮",
+      pig: "🐷",
+      chicken: "🐔",
+      frog: "🐸",
+      deer: "🦌",
     };
 
-    return animalMap[animal] || animal;
+    return animalMap[animal?.trim().toLowerCase()] || animal;
   };
 
   const emoji = animalEmoji(props.animal);

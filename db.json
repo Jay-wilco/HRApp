@@ -186,6 +186,51 @@
         "bullshitting",
         "joking"
       ]
+    },
+    {
+      "id": 1747664796740,
+      "name": "naty",
+      "title": "worker",
+      "salary": 5000,
+      "phone": "320930+90+9",
+      "email": "naty@mail.cpm",
+      "animal": "lion",
+      "startDate": "2010-05-01",
+      "location": "helsinki",
+      "department": "management",
+      "skills": [
+        "many"
+      ]
+    },
+    {
+      "id": 1747665145482,
+      "name": "Alice",
+      "title": "secretary",
+      "salary": 2000,
+      "phone": "321312441§",
+      "email": "alice@mail.com",
+      "animal": "horse",
+      "startDate": "2010-05-01",
+      "location": "helsinki",
+      "department": "management",
+      "skills": [
+        "many"
+      ]
+    },
+    {
+      "id": 1747665293145,
+      "name": "Jay",
+      "title": "big boss",
+      "salary": 10000,
+      "phone": "321312441§",
+      "email": "jay@mail.com",
+      "animal": "horse",
+      "startDate": "2010-05-01",
+      "location": "helsinki",
+      "department": "management",
+      "skills": [
+        "many"
+      ]
     }
   ]
 }
