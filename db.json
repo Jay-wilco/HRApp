@@ -1,0 +1,191 @@
+{
+  "employees": [
+    {
+      "id": "1",
+      "name": "Jay Wilco",
+      "title": "Commander",
+      "salary": 10000,
+      "phone": "040-1234567",
+      "email": "Jay.Wilco@example.com",
+      "animal": "Lion",
+      "startDate": "2010-04-01",
+      "location": "Helsinki",
+      "department": "Management",
+      "skills": [
+        "Recruiting",
+        "Communication",
+        "Employee Relations"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "TJ",
+      "title": "Senior Developer",
+      "salary": 5300,
+      "phone": "045-9876543",
+      "email": "TJ@example.com",
+      "animal": "Tiger",
+      "startDate": "2019-06-15",
+      "location": "Seoul",
+      "department": "IT",
+      "skills": [
+        "JavaScript",
+        "React",
+        "CSS"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Margit Tennosaar",
+      "title": "Coding Wizard",
+      "salary": 6000,
+      "phone": "041-5566778",
+      "email": "Margit.tennosaar@example.com",
+      "animal": "Fox",
+      "startDate": "2005-04-04",
+      "location": "Helsinki",
+      "department": "Management",
+      "skills": [
+        "Coding",
+        "CSS",
+        "Running"
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Basudev",
+      "title": "Junior Developer",
+      "salary": 4500,
+      "phone": "040-3344556",
+      "email": "Basu@example.com",
+      "animal": "Horse",
+      "startDate": "2025-02-05",
+      "location": "Nepal",
+      "department": "Development",
+      "skills": [
+        "PHP",
+        "React",
+        "Python"
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Femi",
+      "title": "Senior Developer",
+      "salary": 4700,
+      "phone": "050-1122334",
+      "email": "Femi@example.com",
+      "animal": "Wolf",
+      "startDate": "2021-03-22",
+      "location": "Helsinki",
+      "department": "Development",
+      "skills": [
+        "Python",
+        "SQL",
+        "React"
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Abdul Majid",
+      "title": "Chef",
+      "salary": 3600,
+      "phone": "046-7788991",
+      "email": "chef.abdul@example.com",
+      "animal": "Camel",
+      "startDate": "2016-11-30",
+      "location": "Espoo",
+      "department": "Kitchen",
+      "skills": [
+        "BBQ",
+        "Cooking",
+        "Dishwashing"
+      ]
+    },
+    {
+      "id": "7",
+      "name": "Mai Tran",
+      "title": "Project Manager",
+      "salary": 5000,
+      "phone": "040-2223344",
+      "email": "mai.tran@example.com",
+      "animal": "Butterfly",
+      "startDate": "2018-07-18",
+      "location": "Vantaa",
+      "department": "Operations",
+      "skills": [
+        "Agile",
+        "Scrum",
+        "Budget Management"
+      ]
+    },
+    {
+      "id": "8",
+      "name": "Binyam",
+      "title": "Junior Developer",
+      "salary": 2500,
+      "phone": "050-4445566",
+      "email": "binjam@example.com",
+      "animal": "Raccoon",
+      "startDate": "2025-10-03",
+      "location": "Helsinki",
+      "department": "Design",
+      "skills": [
+        "CSS",
+        "Figma",
+        "HTML"
+      ]
+    },
+    {
+      "id": "9",
+      "name": "Chinedu",
+      "title": "Coach",
+      "salary": 4000,
+      "phone": "041-6677889",
+      "email": "chinedun@example.com",
+      "animal": "Rabbit",
+      "startDate": "2019-02-25",
+      "location": "Helsinki",
+      "department": "Sports",
+      "skills": [
+        "Coaching",
+        "Strategy",
+        "Branding"
+      ]
+    },
+    {
+      "id": "10",
+      "name": "Saifadullah",
+      "title": "Development Specialist",
+      "salary": 5400,
+      "phone": "045-9988776",
+      "email": "saif@example.com",
+      "animal": "Penguin",
+      "startDate": "2022-05-14",
+      "location": "Helsinki",
+      "department": "IT",
+      "skills": [
+        "Network Security",
+        "Penetration Testing",
+        "Incident Response"
+      ]
+    },
+    {
+      "id": 1747664058827,
+      "name": "xasd",
+      "title": "sdadsa",
+      "salary": null,
+      "phone": "das",
+      "email": "asdsad",
+      "animal": "dolphin",
+      "startDate": "2010-05-01",
+      "location": "helsinki",
+      "department": "management",
+      "skills": [
+        "coding",
+        "bullshitting",
+        "joking"
+      ]
+    }
+  ]
+}

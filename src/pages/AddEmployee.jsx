@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./AddEmployee.css";
@@ -18,13 +19,11 @@ const AddEmployee = ({ onAddEmployee, employees }) => {
 
   const navigate = useNavigate();
 
-  // Handles all input fields
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  // On form submit
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -35,11 +34,28 @@ const AddEmployee = ({ onAddEmployee, employees }) => {
       skills: formData.skills.split(",").map((skill) => skill.trim()),
     };
 
-    // Add new employee to state
-    onAddEmployee((prevEmployees) => [...prevEmployees, newEmployee]);
-
-    // Navigate back to list
-    navigate("/");
+    axios
+      .post("http://localhost:3001/employees", newEmployee)
+      .then((res) => {
+        onAddEmployee([...employees, res.data]);
+        navigate("/");
+        setFormData({
+          name: "",
+          title: "",
+          salary: "",
+          phone: "",
+          email: "",
+          animal: "",
+          startDate: "",
+          location: "",
+          department: "",
+          skills: "",
+        });
+      })
+      .catch((err) => {
+        console.error("failed to add employee", err);
+      });
+    // onAddEmployee((prevEmployees) => [...prevEmployees, newEmployee]);
   };
 
   return (

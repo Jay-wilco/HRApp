@@ -5,6 +5,7 @@ import PersonList from "./components/Person/PersonList";
 import AddEmployee from "./pages/AddEmployee";
 import About from "./pages/About";
 import Header from "./components/Header/Header";
+import "App.css";
 
 const App = () => {
   const [employeesState, setEmployeesState] = useState(employees);
