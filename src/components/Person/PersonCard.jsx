@@ -1,8 +1,24 @@
 import { useState } from "react";
 
-const [isEditing, setIsEditing] = useState(false);
-
 const Person = (props) => {
+  const [isEditing, setIsEditing] = useState(false);
+  const [editedEmployee, setEditedEmployee] = useState({
+    salary: props.salary,
+    location: props.location,
+    department: props.department,
+    skills: props.skills.join(", "),
+  });
+
+  const handleSave = () => {
+    console.log("Saving...");
+  };
+
+  const handleCancel = () => {
+    console.log("Cancelling...");
+
+    setIsEditing(false);
+  };
+
   const getYears = (startDate) => {
     const start = new Date(startDate);
     const now = new Date();
@@ -99,6 +115,17 @@ const Person = (props) => {
         <strong>Skills: </strong>
         {props.skills.join(", ")}
       </p>
+
+      <div className="person-footer">
+        {!isEditing ? (
+          <button onClick={() => setIsEditing(!isEditing)}>Edit</button>
+        ) : (
+          <>
+            <button onClick={handleSave}>Save</button>
+            <button onClick={handleCancel}>Cancel</button>
+          </>
+        )}
+      </div>
     </div>
   );
 };
