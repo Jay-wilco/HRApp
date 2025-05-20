@@ -16,13 +16,11 @@ const Person = (props) => {
   };
 
   const handleSave = () => {
-    console.log("Saving...");
-
     const updatedEmployee = {
       salary: parseFloat(formData.salary),
       location: formData.location,
       department: formData.department,
-      skills: formData.skills.split(", ").map((s) => s.trim),
+      skills: formData.skills.split(", ").map((s) => s.trim()),
     };
 
     axios
@@ -37,7 +35,6 @@ const Person = (props) => {
   };
 
   const handleCancel = () => {
-    console.log("Cancelling...");
     setIsEditing(false);
     setFormData({
       salary: props.salary,

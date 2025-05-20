@@ -29,7 +29,7 @@ const AddEmployee = ({ onAddEmployee, employees }) => {
 
     const newEmployee = {
       ...formData,
-      id: Date.now(),
+      id: Date.now().toString(),
       salary: parseFloat(formData.salary),
       skills: formData.skills.split(",").map((skill) => skill.trim()),
     };

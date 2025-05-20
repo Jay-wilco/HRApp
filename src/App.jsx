@@ -18,11 +18,25 @@ const App = () => {
       .catch((err) => console.error("Failed to get employees", err));
   }, []);
 
+  const handleUpdateEmployee = (updatedEmp) => {
+    setEmployeesState((prev) =>
+      prev.map((emp) => (emp.id === updatedEmp.id ? updatedEmp : emp))
+    );
+  };
+
   return (
     <>
       <Header name="HR App" />
       <Routes>
-        <Route path="/" element={<PersonList employees={employeesState} />} />
+        <Route
+          path="/"
+          element={
+            <PersonList
+              employees={employeesState}
+              onUpdate={handleUpdateEmployee}
+            />
+          }
+        />
         <Route
           path="/add"
           element={

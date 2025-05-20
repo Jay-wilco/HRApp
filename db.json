@@ -12,9 +12,9 @@
       "location": "Helsinki",
       "department": "Management",
       "skills": [
-        null,
-        null,
-        null
+        "joking",
+        "bullshitting",
+        "nonsense"
       ]
     },
     {
@@ -38,7 +38,7 @@
       "id": "3",
       "name": "Margit Tennosaar",
       "title": "Coding Wizard",
-      "salary": 6000,
+      "salary": 5,
       "phone": "041-5566778",
       "email": "Margit.tennosaar@example.com",
       "animal": "Fox",
@@ -46,9 +46,9 @@
       "location": "Helsinki",
       "department": "Management",
       "skills": [
-        "Coding",
-        "CSS",
-        "Running"
+        null,
+        null,
+        null
       ]
     },
     {
@@ -171,7 +171,7 @@
       ]
     },
     {
-      "id": 1747664058827,
+      "id": "1747664058827",
       "name": "xasd",
       "title": "sdadsa",
       "salary": null,
@@ -188,7 +188,7 @@
       ]
     },
     {
-      "id": 1747664796740,
+      "id": "1747664796740",
       "name": "naty",
       "title": "worker",
       "salary": 5000,
@@ -203,7 +203,7 @@
       ]
     },
     {
-      "id": 1747665145482,
+      "id": "1747665145482",
       "name": "Alice",
       "title": "secretary",
       "salary": 2000,
@@ -218,18 +218,56 @@
       ]
     },
     {
-      "id": 1747665293145,
+      "id": "1747665293145",
       "name": "Jay",
       "title": "big boss",
-      "salary": 10000,
+      "salary": 10006,
       "phone": "321312441§",
       "email": "jay@mail.com",
+      "animal": "horse",
+      "startDate": "2010-05-01",
+      "location": "Hell Sinki",
+      "department": "managementish",
+      "skills": [
+        "many",
+        "more",
+        "less",
+        "even wgasdasodljk more"
+      ]
+    },
+    {
+      "id": 1747741351320,
+      "name": "naty",
+      "title": "setdfsdf",
+      "salary": 5000,
+      "phone": "0505471222",
+      "email": "juha@mail.com",
+      "animal": "lion",
+      "startDate": "2010-05-01",
+      "location": "helsinki",
+      "department": "management",
+      "skills": [
+        "coding",
+        "bullshitting",
+        "joking"
+      ]
+    },
+    {
+      "id": "1747742233639",
+      "name": "Juha",
+      "title": "tewfds",
+      "salary": 5003,
+      "phone": "321312441§",
+      "email": "juha@mail.com",
       "animal": "horse",
       "startDate": "2010-05-01",
       "location": "helsinki",
       "department": "management",
       "skills": [
-        "many"
+        "many",
+        "more",
+        "less",
+        "even more"
       ]
     }
   ]
