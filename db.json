@@ -29,9 +29,9 @@
       "location": "Seoul",
       "department": "IT",
       "skills": [
-        null,
-        null,
-        null
+        "Mentoring",
+        "specializing",
+        "coding"
       ]
     },
     {
@@ -40,15 +40,13 @@
       "title": "Coding Wizard",
       "salary": 5,
       "phone": "041-5566778",
-      "email": "Margit.tennosaar@example.com",
+      "email": "Fox@example.com",
       "animal": "Fox",
       "startDate": "2005-04-04",
       "location": "Helsinki",
       "department": "Management",
       "skills": [
-        null,
-        null,
-        null
+        "beyond this galaxy"
       ]
     },
     {

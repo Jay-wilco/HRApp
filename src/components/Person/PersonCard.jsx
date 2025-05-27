@@ -1,14 +1,29 @@
 import axios from "axios";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Person = (props) => {
   const [isEditing, setIsEditing] = useState(false);
   const [formData, setFormData] = useState({
-    salary: props.salary,
-    location: props.location,
-    department: props.department,
-    skills: props.skills.join(", "),
+    salary: "",
+    location: "",
+    department: "",
+    skills: "",
+    phone: "",
+    email: "",
   });
+
+  useEffect(() => {
+    if (isEditing) {
+      setFormData({
+        salary: props.salary,
+        location: props.location,
+        department: props.department,
+        skills: props.skills.join(", "),
+        phone: props.phone || "",
+        email: props.email || "",
+      });
+    }
+  }, [isEditing, props]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
