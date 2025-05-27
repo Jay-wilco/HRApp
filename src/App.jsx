@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
-
 import PersonList from "./components/Person/PersonList";
 import AddEmployee from "./pages/AddEmployee";
 import About from "./pages/About";
@@ -24,6 +23,17 @@ const App = () => {
     );
   };
 
+  const handleDeleteEmployee = (deletedEmp) => {
+    axios
+      .delete(`http://localhost:3001/employees/${deletedEmp}`)
+      .then(() => {
+        setEmployeesState((prev) =>
+          prev.filter((emp) => emp.id !== deletedEmp)
+        );
+      })
+      .catch((err) => console.error("Failed to delete employee", err));
+  };
+
   return (
     <>
       <Header name="HR App" />
@@ -34,6 +44,7 @@ const App = () => {
             <PersonList
               employees={employeesState}
               onUpdate={handleUpdateEmployee}
+              onDelete={handleDeleteEmployee}
             />
           }
         />

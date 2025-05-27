@@ -17,12 +17,15 @@
 }
 
 .addForm input {
-  width: 75%;
+  background-color: #f9f9f9; /* light neutral background */
+  color: #222; /* dark readable text */
+  border: 1px solid #ccc; /* subtle border */
+  width: 100%;
   padding: 12px;
   margin: 10px 0;
-  border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 1rem;
+  transition: border 0.3s, box-shadow 0.3s;
 }
 
 .addForm input:focus {
@@ -41,6 +44,7 @@
   font-size: 1.2rem;
   cursor: pointer;
   transition: background-color 0.3s;
+  margin-top: 10px;
 }
 
 .addForm button:hover {

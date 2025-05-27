@@ -232,42 +232,7 @@
         "many",
         "more",
         "less",
-        "even wgasdasodljk more"
-      ]
-    },
-    {
-      "id": 1747741351320,
-      "name": "naty",
-      "title": "setdfsdf",
-      "salary": 5000,
-      "phone": "0505471222",
-      "email": "juha@mail.com",
-      "animal": "lion",
-      "startDate": "2010-05-01",
-      "location": "helsinki",
-      "department": "management",
-      "skills": [
-        "coding",
-        "bullshitting",
-        "joking"
-      ]
-    },
-    {
-      "id": "1747742233639",
-      "name": "Juha",
-      "title": "tewfds",
-      "salary": 5003,
-      "phone": "321312441§",
-      "email": "juha@mail.com",
-      "animal": "horse",
-      "startDate": "2010-05-01",
-      "location": "helsinki",
-      "department": "management",
-      "skills": [
-        "many",
-        "more",
-        "less",
-        "even more"
+        ""
       ]
     }
   ]

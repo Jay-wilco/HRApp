@@ -21,6 +21,8 @@ const Person = (props) => {
       location: formData.location,
       department: formData.department,
       skills: formData.skills.split(", ").map((s) => s.trim()),
+      phone: formData.phone,
+      email: formData.email,
     };
 
     axios
@@ -41,7 +43,15 @@ const Person = (props) => {
       location: props.location,
       department: props.department,
       skills: props.skills.join(", "),
+      phone: props.phone,
+      email: props.email,
     });
+  };
+
+  const handleDelete = () => {
+    if (window.confirm("Are you sure you want to remove this employee?")) {
+      props.onDelete(props.id);
+    }
   };
 
   const getYears = (startDate) => {
@@ -108,7 +118,7 @@ const Person = (props) => {
 
       {isEditing ? (
         <>
-          <p>
+          <div className="editPerson">
             <strong>Salary: </strong>
             <input
               type="number"
@@ -116,8 +126,8 @@ const Person = (props) => {
               value={formData.salary}
               onChange={handleChange}
             />
-          </p>
-          <p>
+          </div>
+          <div className="editPerson">
             <strong>Location: </strong>
             <input
               type="text"
@@ -125,8 +135,8 @@ const Person = (props) => {
               value={formData.location}
               onChange={handleChange}
             />
-          </p>
-          <p>
+          </div>
+          <div className="editPerson">
             <strong>Department: </strong>
             <input
               type="text"
@@ -134,9 +144,9 @@ const Person = (props) => {
               value={formData.department}
               onChange={handleChange}
             />
-          </p>
+          </div>
 
-          <p>
+          <div className="editPerson">
             <strong>Skills: </strong>
             <input
               type="text"
@@ -144,7 +154,25 @@ const Person = (props) => {
               value={formData.skills}
               onChange={handleChange}
             />
-          </p>
+          </div>
+          <div className="editPerson">
+            <strong>Phone: </strong>
+            <input
+              type="text"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="editPerson">
+            <strong>Email: </strong>
+            <input
+              type="text"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+            />
+          </div>
         </>
       ) : (
         <>
@@ -163,15 +191,17 @@ const Person = (props) => {
             <strong>Skills: </strong>
             {props.skills.join(", ")}
           </p>
+
+          <p>
+            <strong>Phone: </strong>
+            {props.phone}
+          </p>
+          <p>
+            <strong>Email: </strong>
+            {props.email}
+          </p>
         </>
       )}
-
-      <p>
-        <strong>Phone:</strong> {props.phone}
-      </p>
-      <p>
-        <strong>Email:</strong> {props.email}
-      </p>
       <p>
         <strong>Animal: </strong>
         {emoji}
@@ -189,11 +219,20 @@ const Person = (props) => {
 
       <div className="person-footer">
         {!isEditing ? (
-          <button onClick={() => setIsEditing(!isEditing)}>Edit</button>
+          <button className="editBtn" onClick={() => setIsEditing(!isEditing)}>
+            Edit ✏️{" "}
+          </button>
         ) : (
           <>
-            <button onClick={handleSave}>Save</button>
-            <button onClick={handleCancel}>Cancel</button>
+            <button className="save" onClick={handleSave}>
+              Save
+            </button>
+            <button className="cancel" onClick={handleCancel}>
+              Cancel
+            </button>
+            <button className="remove" onClick={handleDelete}>
+              Remove
+            </button>
           </>
         )}
       </div>
