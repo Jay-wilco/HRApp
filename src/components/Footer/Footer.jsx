@@ -1,7 +1,13 @@
-const Footer = (props)=> {
-    return (
-        <footer><h3>Copyright {props.fullName} REACT25K</h3></footer>
-    )
-}
+import "./Footer.css";
+
+const Footer = ({ fullName = "Unknown" }) => {
+  return (
+    <footer className="footer">
+      <h3>
+        © {new Date().getFullYear()} {fullName} — REACT25K
+      </h3>
+    </footer>
+  );
+};
 
 export default Footer;
