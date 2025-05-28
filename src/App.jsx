@@ -1,10 +1,12 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
+import FrontPage from "./pages/FrontPage";
 import PersonList from "./components/Person/PersonList";
 import AddEmployee from "./pages/AddEmployee";
 import About from "./pages/About";
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 import "./App.css";
 
 const App = () => {
@@ -35,31 +37,35 @@ const App = () => {
   };
 
   return (
-    <>
+    <div className="app-container">
       <Header name="HR App" />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <PersonList
-              employees={employeesState}
-              onUpdate={handleUpdateEmployee}
-              onDelete={handleDeleteEmployee}
-            />
-          }
-        />
-        <Route
-          path="/add"
-          element={
-            <AddEmployee
-              onAddEmployee={setEmployeesState}
-              employees={employeesState}
-            />
-          }
-        />
-        <Route path="/about" element={<About />} />
-      </Routes>
-    </>
+      <main>
+        <Routes>
+          <Route path="/" element={<FrontPage employees={employeesState} />} />
+          <Route
+            path="/employees"
+            element={
+              <PersonList
+                employees={employeesState}
+                onUpdate={handleUpdateEmployee}
+                onDelete={handleDeleteEmployee}
+              />
+            }
+          />
+          <Route
+            path="/add"
+            element={
+              <AddEmployee
+                onAddEmployee={setEmployeesState}
+                employees={employeesState}
+              />
+            }
+          />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </main>
+      <Footer fullName="Jay Wilco" />
+    </div>
   );
 };
 

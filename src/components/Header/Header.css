@@ -1,13 +1,11 @@
 header {
-  /* Remove fixed height or include box-sizing */
-  width: 100%;
   background-color: #333;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1.5rem; /* horizontal padding only */
-  height: 55px;
-  box-sizing: border-box; /* so padding included inside height */
+  padding: 0 1.5rem;
+  min-height: 55px;
+  box-sizing: border-box;
 }
 
 nav ul {
@@ -18,14 +16,14 @@ nav ul {
 }
 
 nav ul li {
-  padding: 0 1rem; /* horizontal padding only */
+  padding: 0 1rem;
   display: inline-block;
 }
 
 header a {
   text-decoration: none;
   color: white;
-  margin: 0; /* remove margin, since padding handles spacing */
+  margin: 0;
 }
 
 header a:hover {

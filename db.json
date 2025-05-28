@@ -38,7 +38,7 @@
       "id": "3",
       "name": "Margit Tennosaar",
       "title": "Coding Wizard",
-      "salary": 5,
+      "salary": 10000,
       "phone": "041-5566778",
       "email": "Fox@example.com",
       "animal": "Fox",
@@ -169,23 +169,6 @@
       ]
     },
     {
-      "id": "1747664058827",
-      "name": "xasd",
-      "title": "sdadsa",
-      "salary": null,
-      "phone": "das",
-      "email": "asdsad",
-      "animal": "dolphin",
-      "startDate": "2010-05-01",
-      "location": "helsinki",
-      "department": "management",
-      "skills": [
-        "coding",
-        "bullshitting",
-        "joking"
-      ]
-    },
-    {
       "id": "1747664796740",
       "name": "naty",
       "title": "worker",
@@ -204,15 +187,17 @@
       "id": "1747665145482",
       "name": "Alice",
       "title": "secretary",
-      "salary": 2000,
-      "phone": "321312441§",
+      "salary": 2003,
+      "phone": "3213",
       "email": "alice@mail.com",
       "animal": "horse",
       "startDate": "2010-05-01",
-      "location": "helsinki",
-      "department": "management",
+      "location": "Helsinki",
+      "department": "managementish",
       "skills": [
-        "many"
+        "many",
+        "more",
+        "less"
       ]
     },
     {
@@ -231,6 +216,56 @@
         "more",
         "less",
         ""
+      ]
+    },
+    {
+      "id": "1748436971426",
+      "name": "naty",
+      "title": "bosslady",
+      "salary": 10000,
+      "phone": "320930+90+9",
+      "email": "naty@mail.cpm",
+      "animal": "horse",
+      "startDate": "2010-05-01",
+      "location": "Hell Sinki",
+      "department": "managementish",
+      "skills": [
+        "many",
+        "more",
+        "less",
+        "even more"
+      ]
+    },
+    {
+      "id": "1748440406077",
+      "name": "Juha",
+      "title": "master of shit",
+      "salary": 5000,
+      "phone": "0324904324",
+      "email": "jay@mail.com",
+      "animal": "dragon",
+      "startDate": "2010-05-01",
+      "location": "Hell Sinki",
+      "department": "managementish",
+      "skills": [
+        "joking",
+        "bullshitting",
+        "nonsense"
+      ]
+    },
+    {
+      "id": "1748443885282",
+      "name": "Natalia",
+      "title": "Spouse",
+      "salary": 10000,
+      "phone": "321312441§",
+      "email": "naty@mail.cpm",
+      "animal": "lion",
+      "startDate": "",
+      "location": "Jay wilco's house",
+      "department": "management",
+      "skills": [
+        "Loving and caring"
       ]
     }
   ]

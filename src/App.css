@@ -1,29 +1,18 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-#root {
-  width: 100%;
-  max-width: 1600px;
-  margin: 0 auto;
-  padding: 0 1rem;
-  text-align: center;
-  background-color: chocolate;
-}
-body {
-  background-color: rgb(62, 59, 58);
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 main {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
+  justify-content: center;
   background-color: chocolate;
   gap: 20px;
   align-items: flex-start;
 }
+
 .person {
   position: relative;
   background-color: rgb(242, 247, 245);
@@ -35,6 +24,7 @@ main {
   margin: 20px;
   text-align: left;
 }
+
 .person-footer {
   position: absolute;
   bottom: 10px;
@@ -50,14 +40,14 @@ main {
   border-radius: 5px;
   font-size: 12px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  background-color: #007bff;
-  color: rgb(1, 1, 1);
   background: transparent;
+  transition: background-color 0.3s ease;
+  color: rgb(1, 1, 1);
 }
 
 .person-footer button:hover {
   background-color: #9ec0e4;
+  filter: brightness(0.9);
 }
 
 .person-footer button.save {
@@ -78,10 +68,6 @@ main {
 .person-footer button.edit {
   background-color: #0d6efd;
   color: white;
-}
-
-.person-footer button:hover {
-  filter: brightness(0.9);
 }
 
 .editPerson {
