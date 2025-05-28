@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./backToTop.css";
+import styles from "./BackToTop.module.css"; // import CSS Module
 
 const BackToTop = () => {
   const [visible, setVisible] = useState(false);
@@ -25,7 +25,7 @@ const BackToTop = () => {
 
   return (
     visible && (
-      <button className="back-to-top" onClick={scrollToTop}>
+      <button className={styles["back-to-top"]} onClick={scrollToTop}>
         ↑
       </button>
     )

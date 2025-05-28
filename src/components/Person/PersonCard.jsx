@@ -1,5 +1,6 @@
-import axios from "axios";
+import useAxios from "../../hooks/useAxios";
 import { useEffect, useState } from "react";
+import styles from "./Person.module.css";
 
 const Person = (props) => {
   const [isEditing, setIsEditing] = useState(false);
@@ -11,6 +12,8 @@ const Person = (props) => {
     phone: "",
     email: "",
   });
+
+  const { patch } = useAxios();
 
   useEffect(() => {
     if (isEditing) {
@@ -35,13 +38,12 @@ const Person = (props) => {
       salary: parseFloat(formData.salary),
       location: formData.location,
       department: formData.department,
-      skills: formData.skills.split(", ").map((s) => s.trim()),
+      skills: formData.skills.split(",").map((s) => s.trim()),
       phone: formData.phone,
       email: formData.email,
     };
 
-    axios
-      .patch(`http://localhost:3001/employees/${props.id}`, updatedEmployee)
+    patch(`http://localhost:3001/employees/${props.id}`, updatedEmployee)
       .then((res) => {
         props.onUpdate(res.data);
         setIsEditing(false);
@@ -120,7 +122,7 @@ const Person = (props) => {
   const emoji = animalEmoji(props.animal);
 
   return (
-    <div className="person">
+    <div className={styles.person}>
       <p>
         <strong>Id:</strong> {props.id}
       </p>
@@ -133,7 +135,7 @@ const Person = (props) => {
 
       {isEditing ? (
         <>
-          <div className="editPerson">
+          <div className={styles.editPerson}>
             <strong>Salary: </strong>
             <input
               type="number"
@@ -142,7 +144,7 @@ const Person = (props) => {
               onChange={handleChange}
             />
           </div>
-          <div className="editPerson">
+          <div className={styles.editPerson}>
             <strong>Location: </strong>
             <input
               type="text"
@@ -151,7 +153,7 @@ const Person = (props) => {
               onChange={handleChange}
             />
           </div>
-          <div className="editPerson">
+          <div className={styles.editPerson}>
             <strong>Department: </strong>
             <input
               type="text"
@@ -161,7 +163,7 @@ const Person = (props) => {
             />
           </div>
 
-          <div className="editPerson">
+          <div className={styles.editPerson}>
             <strong>Skills: </strong>
             <input
               type="text"
@@ -170,7 +172,7 @@ const Person = (props) => {
               onChange={handleChange}
             />
           </div>
-          <div className="editPerson">
+          <div className={styles.editPerson}>
             <strong>Phone: </strong>
             <input
               type="text"
@@ -179,7 +181,7 @@ const Person = (props) => {
               onChange={handleChange}
             />
           </div>
-          <div className="editPerson">
+          <div className={styles.editPerson}>
             <strong>Email: </strong>
             <input
               type="text"
@@ -232,20 +234,20 @@ const Person = (props) => {
       {celebrate && <p>🎉 Schedule recognition meeting.</p>}
       {probation && <p>🔔 Schedule probation review.</p>}
 
-      <div className="person-footer">
+      <div className={styles["person-footer"]}>
         {!isEditing ? (
-          <button className="editBtn" onClick={() => setIsEditing(!isEditing)}>
-            Edit ✏️{" "}
+          <button className={styles.editBtn} onClick={() => setIsEditing(true)}>
+            Edit ✏️
           </button>
         ) : (
           <>
-            <button className="save" onClick={handleSave}>
+            <button className={styles.save} onClick={handleSave}>
               Save
             </button>
-            <button className="cancel" onClick={handleCancel}>
+            <button className={styles.cancel} onClick={handleCancel}>
               Cancel
             </button>
-            <button className="remove" onClick={handleDelete}>
+            <button className={styles.remove} onClick={handleDelete}>
               Remove
             </button>
           </>
@@ -254,4 +256,5 @@ const Person = (props) => {
     </div>
   );
 };
+
 export default Person;
