@@ -18,7 +18,7 @@ const App = () => {
     get("http://localhost:3001/employees")
       .then((data) => setEmployeesState(data))
       .catch((err) => console.error("Failed to get employees", err));
-  }, []);
+  }, [get]);
 
   const handleUpdateEmployee = (updatedEmp) => {
     setEmployeesState((prev) =>
