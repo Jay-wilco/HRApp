@@ -1,4 +1,4 @@
-import axios from "axios";
+import useAxios from "../hooks/useAxios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./AddEmployee.css";
@@ -17,6 +17,7 @@ const AddEmployee = ({ onAddEmployee, employees }) => {
     department: "",
     skills: "",
   });
+  const { post } = useAxios();
 
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
@@ -37,10 +38,9 @@ const AddEmployee = ({ onAddEmployee, employees }) => {
       skills: formData.skills.split(",").map((skill) => skill.trim()),
     };
 
-    axios
-      .post("http://localhost:3001/employees", newEmployee)
+    post("http://localhost:3001/employees", newEmployee)
       .then((res) => {
-        onAddEmployee([...employees, res.data]);
+        onAddEmployee([...employees, res]);
 
         setFormData({
           name: "",
@@ -55,9 +55,8 @@ const AddEmployee = ({ onAddEmployee, employees }) => {
           skills: "",
         });
         setTimeout(() => {
-          // hide spinner right before navigation
           navigate("/employees");
-        }, 1000); // Adjust the time as you like (e.g., 800ms)
+        }, 1000);
       })
       .catch((err) => {
         console.error("failed to add employee", err);

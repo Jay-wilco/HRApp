@@ -1,28 +1,25 @@
-/* Spinner overlay covers the entire screen */
 .spinner-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(255, 255, 255, 0.7); /* semi-transparent white */
+  background: rgba(255, 255, 255, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 9999;
 }
 
-/* Simple spinner styling */
 .spinner {
-  border: 8px solid #f3f3f3; /* Light gray */
-  border-top: 8px solid #4caf50; /* Green */
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #4caf50;
   border-radius: 50%;
   width: 60px;
   height: 60px;
   animation: spin 1s linear infinite;
 }
 
-/* Spin animation */
 @keyframes spin {
   0% {
     transform: rotate(0deg);

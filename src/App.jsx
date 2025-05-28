@@ -1,4 +1,4 @@
-import axios from "axios";
+import useAxios from "./hooks/useAxios";
 import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import FrontPage from "./pages/FrontPage";
@@ -12,10 +12,11 @@ import "./App.css";
 const App = () => {
   const [employeesState, setEmployeesState] = useState([]);
 
+  const { get, del } = useAxios();
+
   useEffect(() => {
-    axios
-      .get("http://localhost:3001/employees")
-      .then((res) => setEmployeesState(res.data))
+    get("http://localhost:3001/employees")
+      .then((data) => setEmployeesState(data))
       .catch((err) => console.error("Failed to get employees", err));
   }, []);
 
@@ -26,8 +27,7 @@ const App = () => {
   };
 
   const handleDeleteEmployee = (deletedEmp) => {
-    axios
-      .delete(`http://localhost:3001/employees/${deletedEmp}`)
+    del(`http://localhost:3001/employees/${deletedEmp}`)
       .then(() => {
         setEmployeesState((prev) =>
           prev.filter((emp) => emp.id !== deletedEmp)
