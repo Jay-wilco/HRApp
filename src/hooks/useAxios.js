@@ -1,44 +1,27 @@
 import axios from "axios";
-import { useCallback } from "react";
 
 const useAxios = () => {
-  const get = useCallback(async (url) => {
-    try {
-      const res = await axios.get(url);
-      return res.data;
-    } catch (err) {
-      console.error("GET error: ", err);
-      throw err;
-    }
-  }, []);
+  const baseURL = import.meta.env.VITE_BACKEND_URL;
 
-  const post = useCallback(async (url, data) => {
-    try {
-      const res = await axios.post(url, data);
-      return res.data;
-    } catch (err) {
-      console.error("POST error", err);
-      throw err;
-    }
-  }, []);
-  const patch = useCallback(async (url, data) => {
-    try {
-      const res = await axios.patch(url, data);
-      return res.data;
-    } catch (err) {
-      console.error("PATCH error: ", err);
-      throw err;
-    }
-  }, []);
+  const get = async (endpoint) => {
+    const res = await axios.get(`${baseURL}/${endpoint}`);
+    return res.data;
+  };
 
-  const del = useCallback(async (url) => {
-    try {
-      await axios.delete(url);
-    } catch (err) {
-      console.error("DELETE error", err);
-      throw err;
-    }
-  }, []);
+  const post = async (endpoint, data) => {
+    const res = await axios.post(`${baseURL}/${endpoint}`, data);
+    return res.data;
+  };
+
+  const patch = async (endpoint, data) => {
+    const res = await axios.patch(`${baseURL}/${endpoint}`, data);
+    return res.data;
+  };
+
+  const del = async (endpoint) => {
+    const res = await axios.delete(`${baseURL}/${endpoint}`);
+    return res.data;
+  };
 
   return { get, post, patch, del };
 };

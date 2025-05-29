@@ -38,7 +38,7 @@ const AddEmployee = ({ onAddEmployee, employees }) => {
       skills: formData.skills.split(",").map((skill) => skill.trim()),
     };
 
-    post("http://localhost:3001/employees", newEmployee)
+    post(`employees`, newEmployee)
       .then((res) => {
         onAddEmployee([...employees, res]);
 
