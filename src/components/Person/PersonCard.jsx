@@ -42,8 +42,7 @@ const Person = (props) => {
       phone: formData.phone,
       email: formData.email,
     };
-
-    patch(`http://localhost:3001/employees/${props.id}`, updatedEmployee)
+    patch(`employees/${props.id}`, updatedEmployee)
       .then((res) => {
         props.onUpdate(res.data);
         setIsEditing(false);

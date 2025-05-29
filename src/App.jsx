@@ -15,7 +15,7 @@ const App = () => {
   const { get, del } = useAxios();
 
   useEffect(() => {
-    get("http://localhost:3001/employees")
+    get("employees")
       .then((data) => setEmployeesState(data))
       .catch((err) => console.error("Failed to get employees", err));
   }, [get]);
@@ -27,7 +27,7 @@ const App = () => {
   };
 
   const handleDeleteEmployee = (deletedEmp) => {
-    del(`http://localhost:3001/employees/${deletedEmp}`)
+    del(`employees/${deletedEmp}`)
       .then(() => {
         setEmployeesState((prev) =>
           prev.filter((emp) => emp.id !== deletedEmp)
