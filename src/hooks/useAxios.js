@@ -1,27 +1,28 @@
 import axios from "axios";
+import { useCallback } from "react";
+
+const baseURL = import.meta.env.VITE_BACKEND_URL;
 
 const useAxios = () => {
-  const baseURL = import.meta.env.VITE_BACKEND_URL;
-
-  const get = async (endpoint) => {
+  const get = useCallback(async (endpoint) => {
     const res = await axios.get(`${baseURL}/${endpoint}`);
     return res.data;
-  };
+  }, []);
 
-  const post = async (endpoint, data) => {
+  const post = useCallback(async (endpoint, data) => {
     const res = await axios.post(`${baseURL}/${endpoint}`, data);
     return res.data;
-  };
+  }, []);
 
-  const patch = async (endpoint, data) => {
+  const patch = useCallback(async (endpoint, data) => {
     const res = await axios.patch(`${baseURL}/${endpoint}`, data);
     return res.data;
-  };
+  }, []);
 
-  const del = async (endpoint) => {
+  const del = useCallback(async (endpoint) => {
     const res = await axios.delete(`${baseURL}/${endpoint}`);
     return res.data;
-  };
+  }, []);
 
   return { get, post, patch, del };
 };

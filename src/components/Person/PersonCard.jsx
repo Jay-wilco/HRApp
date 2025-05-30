@@ -21,12 +21,21 @@ const Person = (props) => {
         salary: props.salary,
         location: props.location,
         department: props.department,
-        skills: props.skills.join(", "),
+        skills: Array.isArray(props.skills) ? props.skills.join(", ") : "",
         phone: props.phone || "",
         email: props.email || "",
       });
+      console.log("useEffect triggered: isEditing =", isEditing);
     }
-  }, [isEditing, props]);
+  }, [
+    isEditing,
+    props.salary,
+    props.location,
+    props.department,
+    props.skills,
+    props.phone,
+    props.email,
+  ]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -42,9 +51,11 @@ const Person = (props) => {
       phone: formData.phone,
       email: formData.email,
     };
+    console.log("Saving updated employee:", updatedEmployee);
     patch(`employees/${props.id}`, updatedEmployee)
       .then((res) => {
-        props.onUpdate(res.data);
+        console.log("patch response data", res);
+        props.onUpdate(res);
         setIsEditing(false);
       })
       .catch((err) => {
@@ -205,7 +216,7 @@ const Person = (props) => {
           </p>
           <p>
             <strong>Skills: </strong>
-            {props.skills.join(", ")}
+            {Array.isArray(props.skills) ? props.skills.join(", ") : ""}
           </p>
 
           <p>
