@@ -8,14 +8,11 @@ import About from "./pages/About";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import "./App.css";
-// import { useAxios2 } from "./hooks/useAxios2";
 
 const App = () => {
   const [employeesState, setEmployeesState] = useState([]);
 
   const { get, del } = useAxios();
-
-  // const { data } = useAxios2("employees");
 
   useEffect(() => {
     get("employees")
@@ -24,13 +21,9 @@ const App = () => {
   }, [get]);
 
   const handleUpdateEmployee = (updatedEmp) => {
-    setEmployeesState((prev) => {
-      console.log("PREV", prev);
-      console.log("UPD", updatedEmp);
-      return prev.map((emp) =>
-        emp.id && emp.id === updatedEmp.id ? updatedEmp : emp
-      );
-    });
+    setEmployeesState((prev) =>
+      prev.map((emp) => (emp && emp.id === updatedEmp.id ? updatedEmp : emp))
+    );
   };
 
   const handleDeleteEmployee = (deletedEmp) => {
