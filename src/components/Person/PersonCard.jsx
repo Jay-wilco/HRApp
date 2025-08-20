@@ -55,7 +55,9 @@ const Person = (props) => {
     patch(`employees/${props.id}`, updatedEmployee)
       .then((res) => {
         console.log("patch response data", res);
-        props.onUpdate(res);
+        console;
+
+        props.onUpdate(res.data);
         setIsEditing(false);
       })
       .catch((err) => {
