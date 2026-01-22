@@ -4,6 +4,12 @@
   border-radius: 8px;
   margin-bottom: 12px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  /* NEW: make cards consistent */
+  height: 500px; /* adjust to your taste */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* prevents content from blowing up height */
 }
 
 .editPerson {
@@ -11,7 +17,8 @@
 }
 
 .person-footer {
-  margin-top: 16px;
+  margin-top: auto;
+  padding-top: 12px;
 }
 
 button {
