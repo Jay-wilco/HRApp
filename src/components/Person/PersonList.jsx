@@ -1,11 +1,12 @@
 import BackToTop from "../BackToTop/BackToTop";
 import PersonCard from "./PersonCard";
+import styles from "./PersonList.module.css";
 
 const PersonList = ({ employees, onUpdate, onDelete }) => {
   return (
     <>
       <h2>Employees</h2>
-      <main>
+      <main className={styles.grid}>
         {employees.length > 0 ? (
           employees.map((employee) => (
             <PersonCard
